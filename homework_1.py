@@ -54,7 +54,7 @@ def bananas(s):
     """Задача №4.
 
     Метод bananas, который принимает на вход строку
-    и возвращае  т количество слов «banana» в строке.
+    и возвращает количество слов «banana» в строке.
     """
     banana = "banana"
     graph_number = len(s) - len(banana)
