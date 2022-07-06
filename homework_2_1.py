@@ -30,9 +30,7 @@ class Graph(object):
             point_1 = input_data[0]
             input_data = input_data[1:]
             for point_2 in input_data:
-                init_graph[str(point_1)][str(point_2)] = (
-                                    ((point_2[0] - point_1[0])**2 +
-                                     (point_2[1] - point_1[1])**2)**0.5)
+                init_graph[str(point_1)][str(point_2)] = (((point_2[0] - point_1[0])**2 + (point_2[1] - point_1[1])**2)**0.5)
             return self.generator_init_graph(input_data, init_graph)
         return init_graph
 
@@ -120,10 +118,10 @@ class PostmansRoute:
             key_list = []
             for j in range(len(i)):
                 if route_value == 0:
-                    key_list += [i[-len(i)+j]]
-                value_vs_node = graph.value(i[-len(i)+j], i[-len(i)+j+1])
+                    key_list += [i[-len(i) + j]]
+                value_vs_node = graph.value(i[-len(i) + j], i[-len(i) + j + 1])
                 route_value += value_vs_node
-                key_list += [i[-len(i)+j+1] + str([route_value])]
+                key_list += [i[-len(i) + j + 1] + str([route_value])]
             dict_road[str(" -> ".join(key_list))] = route_value
             shortest_route_value.append(route_value)
             shortest_route_value = sorted(shortest_route_value)
@@ -151,8 +149,7 @@ for i in range(int(input("Введите количество точек: "))):
 
 graph = Graph(input_data)
 postman = PostmansRoute(graph)
-result_route_list, result_value_route = postman.postmans_route(
-                                str(input_data[0]), graph.get_nodes(), [], [])
+result_route_list, result_value_route = postman.postmans_route(str(input_data[0]), graph.get_nodes(), [], [])
 
 for i in result_route_list:  # вывод результатов поиска
     if result_route_list[i] == result_value_route:

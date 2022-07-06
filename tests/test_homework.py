@@ -4,7 +4,7 @@
 """
 
 from homework_1 import bananas, count_find_num, domain_name, int32_to_ip, zeros
-
+from homework_2_1 import Graph, PostmansRoute
 import pytest
 
 
@@ -69,12 +69,3 @@ class TestHomework_1:
         self.limit = limit
         self.result = result
         assert count_find_num(self.primesL, self.limit) == self.result
-
-
-@pytest.mark.skip('Тесты для решений задач после второй лекции.')
-class TestHomework_2:
-    """Тест для задач после второй лекции."""
-
-    def test_homework_2(self, input_data):
-        """Тест к задаче №4."""
-        assert function_homework2(input_data) == "(0, 1) -> (1, 4)[3.1622776601683795] -> (4, 1)[7.404918347287664] -> (5, 5)[11.528023972905324] -> (7, 2)[15.133575248369313] -> (0, 1)[22.204643060234787] = 22.204643060234787"
