@@ -152,7 +152,7 @@ class GameXO:
         """Поиск линии с нужным количеством X и O на победных линиях."""
         for i in range(self.n):
             for j in range(self.n):
-                if self.check(i, j, (0, 1)) or self.check(i, j, (1, 0)) or self.check(i, j, (1, 1)):
+                if self.check(i, j, (0, 1)) or self.check(i, j, (1, 0)) or self.check(i, j, (1, 1)) or self.check(i, j, (1, -1)):
                     return self.maps_gen[i][j]
 
         return ""
