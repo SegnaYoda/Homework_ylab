@@ -18,12 +18,12 @@ class App():
     def tkinter_win_out(self, win):
         """Вывод информации о победе."""
         if win == "X":
-            msg = "вы проиграли!"
-            mb.showinfo("Человек", msg)
+            msg = "Вы проиграли!"
+            mb.showinfo("Эй, человек", msg)
             return True
         elif win == "O":
-            msg = "проиграл!"
-            mb.showinfo("Компьютер", msg)
+            msg = "Ну вот проиграл!"
+            mb.showinfo("Компьютер проиграл", msg)
             return True
 
     def tk_nobody_winner(self):
@@ -114,7 +114,7 @@ class GameOnGUI:
         """Для проверки победителя."""
         if win:
             self.output_tkinter.tkinter_win_out(win)
-        elif len(self.list_choice) == 1:
+        elif len(self.list_choice) == 0:
             self.output_tkinter.tk_nobody_winner()
 
     def ai_choices(self, list_choice):
@@ -153,6 +153,6 @@ window = Tk()
 window.title("Добро пожаловать в приложение PythonRu")
 window.geometry('900x920')
 
-game_on_gui = GameOnGUI(10, 5)  # Внесите размер игрвого поля и количество повторений X-O для проигрыша
+game_on_gui = GameOnGUI(3, 3)  # Внесите размер игрвого поля и количество повторений X-O для проигрыша
 game_on_gui.start_game_gui()
 window.mainloop()

@@ -130,7 +130,7 @@ class GameXO:
                 win = self.get_result()  # определим победителя
                 if win:
                     return self.output_msg.winner_output(win)
-                elif len(self.list_choice) == 1:
+                elif len(self.list_choice) == 0:
                     return self.output_msg.nobody_winner()
 
             self.human = not(self.human)
