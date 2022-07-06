@@ -12,7 +12,7 @@ import tkinter.messagebox as mb
 from tkinter import Button, Tk
 
 
-class App(Tk):
+class App():
     """Класс для вывода информации."""
 
     def tkinter_win_out(self, win):
