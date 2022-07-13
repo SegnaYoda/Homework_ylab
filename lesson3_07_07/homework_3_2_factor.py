@@ -22,7 +22,7 @@ def decorator_with_params(call_count, start_sleep_time, factor, border_sleep_tim
                 print("Начало работы")
                 for i in range(1, call_count + 1):
                     if t < border_sleep_time:
-                        t = t * (2**factor)
+                        t = t * factor
                         if t >= border_sleep_time:
                             t = border_sleep_time
                     rslt = func(number)
@@ -34,7 +34,7 @@ def decorator_with_params(call_count, start_sleep_time, factor, border_sleep_tim
     return decorator_repeat
 
 
-@decorator_with_params(call_count=4, start_sleep_time=0.1, factor=2, border_sleep_time=6)
+@decorator_with_params(call_count=4, start_sleep_time=0.1, factor=2, border_sleep_time=2)
 def multiplier(number: int):
     """Чистая функция."""
     return number * 2
