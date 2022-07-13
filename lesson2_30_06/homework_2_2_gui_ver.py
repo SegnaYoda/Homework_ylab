@@ -153,6 +153,6 @@ window = Tk()
 window.title("Добро пожаловать в приложение PythonRu")
 window.geometry('900x920')
 
-game_on_gui = GameOnGUI(3, 3)  # Внесите размер игрвого поля и количество повторений X-O для проигрыша
+game_on_gui = GameOnGUI(10, 5)  # Внесите размер игрвого поля и количество повторений X-O для проигрыша
 game_on_gui.start_game_gui()
 window.mainloop()

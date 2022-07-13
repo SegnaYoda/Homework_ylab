@@ -1,14 +1,13 @@
 """Тесты к заданиям после первой лекции.
 
-Для запуска введите команду `pytest -s -v tests/test_homework.py`
+Для запуска введите команду `pytest -s -v tests/test_homework_1.py`
 """
 
-from homework_1 import bananas, count_find_num, domain_name, int32_to_ip, zeros
-from homework_2_1 import Graph, PostmansRoute
+from lesson1_23_06.homework_1 import bananas, count_find_num, domain_name, int32_to_ip, zeros
 import pytest
 
 
-@pytest.mark.skip('Тесты для решений задач после первой лекции.')
+# @pytest.mark.skip('Тесты для решений задач после первой лекции.')
 class TestHomework_1:
     """Тест для задач."""
 
