@@ -21,13 +21,13 @@ def decorator_with_params(call_count, start_sleep_time, factor, border_sleep_tim
             if call_count != 0:
                 print("Начало работы")
                 for i in range(1, call_count + 1):
+                    rslt = func(number)
+                    print(f"Запуск номер {i}. Ожидание: {t} секунд. Результат декорируемой функций = {rslt}.")
+                    time.sleep(t)
                     if t < border_sleep_time:
                         t = t * factor
                         if t >= border_sleep_time:
                             t = border_sleep_time
-                    rslt = func(number)
-                    time.sleep(t)
-                    print(f"Запуск номер {i}. Ожидание: {t} секунд. Результат декорируемой функций = {rslt}.")
                 print("Конец работы")
                 return rslt
         return wrapper_repeat
