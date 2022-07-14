@@ -5,9 +5,11 @@
 Когда возникнут трудности? Добавьте оповещение о победе героя через газеты или через TV (на выбор)
 а также попробуйте оповестить планеты (у которых вместа атрибута name:str используется coordinates:List[float]).
 """
+from abc import ABC, abstractmethod
 
 
-class NewsCreater:
+class NewsCreater(ABC):
 
+    @abstractmethod
     def create_news(self):
         pass
