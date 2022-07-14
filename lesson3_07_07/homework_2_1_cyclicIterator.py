@@ -52,7 +52,7 @@ dict1 = {123: "FIGD", "BBC": 900002, (42,): [1, 2, 3]}
 range1 = range(3)
 range2 = Range2(5)
 
-cyclic_iterator = CyclicIterator(dict1)
+cyclic_iterator = CyclicIterator(range2)
 
 if __name__ == "__main__":
     for i in cyclic_iterator:

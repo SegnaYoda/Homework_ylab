@@ -1,6 +1,4 @@
 """Сущности городов."""
-
-
 from antagonistfinder import AntagonistContaingPlace
 
 

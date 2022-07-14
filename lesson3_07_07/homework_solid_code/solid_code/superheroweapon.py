@@ -36,5 +36,5 @@ class SuperManWeapon(Kick, Laser):
     pass
 
 
-class ChackNorrisWeapon(Kick, Gun):
+class ChackNorrisWeapon(Gun):
     pass

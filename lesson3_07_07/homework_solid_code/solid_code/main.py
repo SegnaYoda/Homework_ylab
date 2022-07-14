@@ -1,20 +1,14 @@
 """Код, который спасет мир."""
-
-
-from typing import Union
-
 from heroes import ChackNorris, SuperHero, Superman
 
-from newscreator import NewsPaper, PlanetMedia, TVShows
+from newscreator import NewsCreater, NewsPaper, PlanetMedia, TVShows
 
-from places import Kostroma, Tokyo
+from places import Town, Kostroma, Tokyo
 
 
-def save_the_place(hero: SuperHero, place: Union[Kostroma, Tokyo], news: Union[NewsPaper, TVShows, PlanetMedia]):
+def save_the_place(hero: SuperHero, place: Town, news: NewsCreater):
     hero.inspect(place)
     hero.attack()
-    if hero.can_use_ultimate_attack:
-        hero.ultimate()
     news.create_news(place, hero)
 
 

@@ -7,15 +7,7 @@
 """
 
 
-class News:
-
-    def create_news(self):
-        pass
-
-
 class NewsCreater:
-
-    news = News()
 
     def create_news(self):
         pass
@@ -40,6 +32,6 @@ class TVShows(NewsCreater):
 class PlanetMedia(NewsCreater):
 
     def create_news(self, place, hero):
-        place_name = getattr(place, 'coordinates')
+        place_crdnts = getattr(place, 'coordinates')
         hero_name = getattr(hero, 'name')
-        print(f'{hero_name} saved the {place_name}!')
+        print(f'{hero_name} saved the {place_crdnts}!')
