@@ -5,10 +5,7 @@
 По SOLID: Не допускать таких вольностей.
 Когда возникнут трудности? При первой же битве.
 """
-
-from antagonistfinder import AntagonistFinder
-
-from superheroweapon import ChackNorrisWeapon, SuperManWeapon
+from project_heroes.antagonistfinder import AntagonistFinder
 
 
 class SuperHero:
@@ -22,27 +19,3 @@ class SuperHero:
 
     def attack(self):
         pass
-
-
-class Superman(SuperHero):
-
-    def __init__(self):
-        super(Superman, self).__init__('Clark Kent')
-        self.weapon = SuperManWeapon()
-
-    def attack(self):
-        self.weapon.roundhouse_kick()
-        self.ultimate()
-
-    def ultimate(self):
-        self.weapon.incinerate_with_lasers()
-
-
-class ChackNorris(SuperHero):
-
-    def __init__(self):
-        super(ChackNorris, self).__init__('Chack Norris')
-        self.weapon = ChackNorrisWeapon()
-
-    def attack(self):
-        self.weapon.fire_a_gun()

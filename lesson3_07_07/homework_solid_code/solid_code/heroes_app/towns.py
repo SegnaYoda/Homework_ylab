@@ -1,12 +1,4 @@
-"""Сущности городов."""
-from antagonistfinder import AntagonistContaingPlace
-
-
-class Town(AntagonistContaingPlace):
-
-    def __init__(self, name, coordinates):
-        self.name = name
-        self.coordinates = coordinates
+from project_heroes.places import Town
 
 
 class Kostroma(Town):

@@ -1,9 +1,11 @@
 """Код, который спасет мир."""
-from heroes import ChackNorris, SuperHero, Superman
+from heroes_app.heroes_team import ChackNorris, Superman
+from heroes_app.news_media import NewsPaper, PlanetMedia, TVShows
+from heroes_app.towns import Kostroma, Tokyo
 
-from newscreator import NewsCreater, NewsPaper, PlanetMedia, TVShows
-
-from places import Town, Kostroma, Tokyo
+from project_heroes.heroes import SuperHero
+from project_heroes.newscreator import NewsCreater
+from project_heroes.places import Town
 
 
 def save_the_place(hero: SuperHero, place: Town, news: NewsCreater):
